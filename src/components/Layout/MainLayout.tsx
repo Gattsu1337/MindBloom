@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { 
   Sidebar, 
-  SidebarContent, 
+  SidebarContent as UISidebarContent, 
   SidebarTrigger, 
   SidebarMenu,
   SidebarMenuItem,
@@ -29,9 +29,10 @@ interface MainLayoutProps {
   children: React.ReactNode;
 }
 
-const SidebarContent = () => {
+const SidebarNavContent = () => {
   const { logout } = useAuth();
-  const { collapsed } = useSidebar();
+  const { state } = useSidebar();
+  const collapsed = state === "collapsed";
   const location = useLocation();
   
   const isActive = (path: string) => location.pathname === path;
@@ -52,7 +53,7 @@ const SidebarContent = () => {
           </SidebarTrigger>
         </div>
         
-        <SidebarContent className="px-3 py-2 flex-1">
+        <UISidebarContent className="px-3 py-2 flex-1">
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton asChild>
@@ -99,7 +100,7 @@ const SidebarContent = () => {
               </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>
-        </SidebarContent>
+        </UISidebarContent>
         
         <div className="p-4 border-t mt-auto">
           {!collapsed ? (
@@ -130,9 +131,9 @@ const SidebarContent = () => {
 
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <SidebarProvider collapsedWidth={70}>
+    <SidebarProvider>
       <div className="min-h-screen flex w-full bg-background">
-        <SidebarContent />
+        <SidebarNavContent />
         
         <div className="flex-1 flex flex-col">
           <main className="flex-1 p-6">
