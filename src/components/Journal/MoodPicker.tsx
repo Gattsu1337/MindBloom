@@ -7,7 +7,7 @@ import {
   Frown,
   Angry,
   Meh,
-  Happy
+  Laugh
 } from 'lucide-react';
 
 interface MoodPickerProps {
@@ -27,7 +27,7 @@ interface MoodOption {
 const moodOptions: MoodOption[] = [
   {
     mood: 'Happy',
-    icon: Happy,
+    icon: Smile, // Changed from Happy to Smile
     label: 'Happy',
     bgColor: 'bg-green-100',
     hoverColor: 'hover:bg-green-200',
@@ -55,7 +55,7 @@ const moodOptions: MoodOption[] = [
   },
   {
     mood: 'Excited',
-    icon: Smile,
+    icon: Laugh, // Changed from Smile to Laugh to differentiate from Happy
     label: 'Excited',
     bgColor: 'bg-purple-100',
     hoverColor: 'hover:bg-purple-200',
