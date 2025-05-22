@@ -75,7 +75,7 @@ export const mockRecommendations: Recommendation[] = [
   },
   {
     id: '3',
-    content: 'List three things you're grateful for today and reflect on why they bring you joy.',
+    content: "List three things you're grateful for today and reflect on why they bring you joy.",
     mood: 'Happy',
     type: 'Exercise',
   },
@@ -91,11 +91,41 @@ export const mockRecommendations: Recommendation[] = [
     mood: 'Happy',
     type: 'Exercise',
   },
+  {
+    id: '31',
+    content: '"The happiness of your life depends upon the quality of your thoughts." - Marcus Aurelius',
+    mood: 'Happy',
+    type: 'Quote',
+  },
+  {
+    id: '32',
+    content: 'Take a moment to savor something small that brings you joy - like a cup of tea or the sunlight through a window.',
+    mood: 'Happy',
+    type: 'Exercise',
+  },
+  {
+    id: '33',
+    content: 'Put on your favorite upbeat music and dance for 5 minutes to amplify your positive mood.',
+    mood: 'Happy',
+    type: 'Exercise',
+  },
+  {
+    id: '34',
+    content: 'Try taking a photo of something that made you happy today to create a visual happiness journal.',
+    mood: 'Happy',
+    type: 'Advice',
+  },
+  {
+    id: '35',
+    content: '"Happiness is when what you think, what you say, and what you do are in harmony." - Mahatma Gandhi',
+    mood: 'Happy',
+    type: 'Quote',
+  },
   
   // Sad mood recommendations
   {
     id: '6',
-    content: '"There is a crack in everything, that\'s how the light gets in." - Leonard Cohen',
+    content: "\"There is a crack in everything, that's how the light gets in.\" - Leonard Cohen",
     mood: 'Sad',
     type: 'Quote',
   },
@@ -107,7 +137,7 @@ export const mockRecommendations: Recommendation[] = [
   },
   {
     id: '8',
-    content: 'Try journaling about what\'s making you feel this way. Sometimes putting thoughts on paper helps process emotions.',
+    content: "Try journaling about what's making you feel this way. Sometimes putting thoughts on paper helps process emotions.",
     mood: 'Sad',
     type: 'Advice',
   },
@@ -122,6 +152,36 @@ export const mockRecommendations: Recommendation[] = [
     content: 'Engage your senses: Find something pleasant to see, touch, smell, taste, and hear to ground yourself in the present moment.',
     mood: 'Sad',
     type: 'Exercise',
+  },
+  {
+    id: '36',
+    content: '"Sadness flies away on the wings of time." - Jean de La Fontaine',
+    mood: 'Sad',
+    type: 'Quote',  
+  },
+  {
+    id: '37',
+    content: 'Create a comfort box with items that soothe you - photos, a soft item, a favorite tea, etc.',
+    mood: 'Sad',
+    type: 'Exercise',
+  },
+  {
+    id: '38',
+    content: 'Try gentle movement like stretching or a slow walk to release endorphins without requiring too much energy.',
+    mood: 'Sad',
+    type: 'Exercise',
+  },
+  {
+    id: '39',
+    content: 'Reach out to someone you trust. Simply saying "I feel down today" can be healing.',
+    mood: 'Sad',
+    type: 'Advice',
+  },
+  {
+    id: '40',
+    content: '"The pain you feel today is the strength you feel tomorrow." - Unknown',
+    mood: 'Sad',
+    type: 'Quote',
   },
   
   // Angry mood recommendations
@@ -155,6 +215,36 @@ export const mockRecommendations: Recommendation[] = [
     mood: 'Angry',
     type: 'Advice',
   },
+  {
+    id: '41',
+    content: '"Holding onto anger is like drinking poison and expecting the other person to die." - Buddha',
+    mood: 'Angry',
+    type: 'Quote',
+  },
+  {
+    id: '42',
+    content: 'Write a letter expressing your anger without holding back (but without sending it).',
+    mood: 'Angry',
+    type: 'Exercise',
+  },
+  {
+    id: '43',
+    content: 'Try progressive muscle relaxation: tense and then release each muscle group in your body.',
+    mood: 'Angry',
+    type: 'Exercise',
+  },
+  {
+    id: '44',
+    content: 'Identify the need behind your anger. Often anger signifies an unmet need for respect, fairness, or control.',
+    mood: 'Angry',
+    type: 'Advice',
+  },
+  {
+    id: '45',
+    content: '"The greatest remedy for anger is delay." - Seneca',
+    mood: 'Angry',
+    type: 'Quote',
+  },
   
   // Anxious mood recommendations
   {
@@ -165,7 +255,7 @@ export const mockRecommendations: Recommendation[] = [
   },
   {
     id: '17',
-    content: '"You don't have to control your thoughts. You just have to stop letting them control you." - Dan Millman',
+    content: "\"You don't have to control your thoughts. You just have to stop letting them control you.\" - Dan Millman",
     mood: 'Anxious',
     type: 'Quote',
   },
@@ -186,6 +276,36 @@ export const mockRecommendations: Recommendation[] = [
     content: 'Write down your worries, then next to each one, note what you can and cannot control about the situation.',
     mood: 'Anxious',
     type: 'Advice',
+  },
+  {
+    id: '46',
+    content: '"Anxiety is a thin stream of fear trickling through the mind. If encouraged, it cuts a channel into which all other thoughts are drained." - Arthur Somers Roche',
+    mood: 'Anxious',
+    type: 'Quote',
+  },
+  {
+    id: '47',
+    content: 'Put your hands under cold water for 30 seconds to help reset your nervous system.',
+    mood: 'Anxious',
+    type: 'Exercise',
+  },
+  {
+    id: '48',
+    content: 'Create a worry period: set aside 15 minutes daily to focus on worries, then let them go outside that time.',
+    mood: 'Anxious',
+    type: 'Advice',
+  },
+  {
+    id: '49',
+    content: 'Try box breathing: inhale for 4 counts, hold for 4, exhale for 4, hold for 4. Repeat.',
+    mood: 'Anxious',
+    type: 'Exercise',
+  },
+  {
+    id: '50',
+    content: '"Peace is the result of retraining your mind to process life as it is, rather than as you think it should be." - Wayne Dyer',
+    mood: 'Anxious',
+    type: 'Quote',
   },
   
   // Excited mood recommendations
@@ -209,7 +329,7 @@ export const mockRecommendations: Recommendation[] = [
   },
   {
     id: '24',
-    content: 'Create a vision board or write down your goals while you're feeling motivated and inspired.',
+    content: "Create a vision board or write down your goals while you're feeling motivated and inspired.",
     mood: 'Excited',
     type: 'Exercise',
   },
@@ -218,6 +338,36 @@ export const mockRecommendations: Recommendation[] = [
     content: 'Share your excitement with someone who will appreciate and celebrate with you.',
     mood: 'Excited',
     type: 'Advice',
+  },
+  {
+    id: '51',
+    content: '"Energy and persistence conquer all things." - Benjamin Franklin',
+    mood: 'Excited',
+    type: 'Quote',
+  },
+  {
+    id: '52',
+    content: 'Document this excited state with a voice memo or journal entry to revisit when you need motivation.',
+    mood: 'Excited',
+    type: 'Exercise',
+  },
+  {
+    id: '53',
+    content: 'Use this energized state to tackle a challenging task that requires enthusiasm.',
+    mood: 'Excited',
+    type: 'Advice',
+  },
+  {
+    id: '54',
+    content: 'Set small, achievable milestones to maintain this positive momentum.',
+    mood: 'Excited',
+    type: 'Exercise',
+  },
+  {
+    id: '55',
+    content: '"Your positive action combined with positive thinking results in success." - Shiv Khera',
+    mood: 'Excited',
+    type: 'Quote',
   },
   
   // Neutral mood recommendations
@@ -229,7 +379,7 @@ export const mockRecommendations: Recommendation[] = [
   },
   {
     id: '27',
-    content: '"Life isn't about finding yourself. Life is about creating yourself." - George Bernard Shaw',
+    content: "\"Life isn't about finding yourself. Life is about creating yourself.\" - George Bernard Shaw",
     mood: 'Neutral',
     type: 'Quote',
   },
@@ -250,6 +400,36 @@ export const mockRecommendations: Recommendation[] = [
     content: 'Practice a body scan meditation: Start at your toes and slowly move attention up through your body, noticing sensations without judgment.',
     mood: 'Neutral',
     type: 'Exercise',
+  },
+  {
+    id: '56',
+    content: '"The meaning of life is to give life meaning." - Viktor Frankl',
+    mood: 'Neutral',
+    type: 'Quote',
+  },
+  {
+    id: '57',
+    content: 'Try the "five senses check-in" - note one thing you can currently see, hear, feel, smell, and taste.',
+    mood: 'Neutral',
+    type: 'Exercise',
+  },
+  {
+    id: '58',
+    content: 'Consider setting an intention for the day, even a simple one like "I will notice moments of beauty."',
+    mood: 'Neutral',
+    type: 'Advice',
+  },
+  {
+    id: '59',
+    content: 'Practice mindful observation: choose an object and examine it with full attention for 2 minutes.',
+    mood: 'Neutral',
+    type: 'Exercise',
+  },
+  {
+    id: '60',
+    content: '"How we spend our days is, of course, how we spend our lives." - Annie Dillard',
+    mood: 'Neutral',
+    type: 'Quote',
   },
 ];
 
