@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 100% 99%;
+    --foreground: 240 10% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 20%;
+
+    --primary: 250 95% 76%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 20% 96%;
+    --secondary-foreground: 240 10% 20%;
+
+    --muted: 240 20% 96%;
+    --muted-foreground: 240 10% 40%;
+
+    --accent: 250 95% 90%;
+    --accent-foreground: 250 95% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 20% 92%;
+    --input: 240 20% 92%;
+    --ring: 250 95% 76%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 240 10% 10%;
+    --foreground: 240 10% 98%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 240 10% 98%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 240 10% 98%;
+
+    --primary: 250 95% 76%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 10% 18%;
+    --secondary-foreground: 240 10% 98%;
+
+    --muted: 240 10% 18%;
+    --muted-foreground: 240 10% 60%;
+
+    --accent: 250 95% 30%;
+    --accent-foreground: 240 10% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 240 10% 98%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 250 95% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html, body {
+    @apply h-full;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+
+  #root {
+    @apply h-full;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.mood-happy { @apply bg-green-200 border-green-300; }
+.mood-sad { @apply bg-blue-200 border-blue-300; }
+.mood-angry { @apply bg-red-200 border-red-300; }
+.mood-anxious { @apply bg-yellow-200 border-yellow-300; }
+.mood-excited { @apply bg-purple-200 border-purple-300; }
+.mood-neutral { @apply bg-gray-200 border-gray-300; }

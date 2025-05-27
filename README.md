@@ -1,73 +1,67 @@
-# Welcome to your Lovable project
+# MindBloom - Mental Health Journal Application
 
-## Project info
+A web application for tracking and analyzing emotional states through personal journal entries and receiving personalized recommendations for maintaining mental well-being.
 
-**URL**: https://lovable.dev/projects/60cadab0-1759-470a-a03a-beb8a6c8d59b
+## Project Structure
 
-## How can I edit this code?
+```
+mindbloom/
+├── client/           # Frontend React application
+└── server/           # Backend Node.js application
+    ├── src/
+    │   ├── config/      # Configuration files
+    │   ├── middleware/  # Express middleware
+    │   ├── models/      # Database models
+    │   ├── routes/      # API routes
+    │   └── server.js    # Main application file
+    └── package.json
+```
 
-There are several ways of editing your application.
+## Backend Setup
 
-**Use Lovable**
+1. Navigate to the server directory:
+```bash
+cd server
+```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/60cadab0-1759-470a-a03a-beb8a6c8d59b) and start prompting.
+2. Install dependencies:
+```bash
+npm install
+```
 
-Changes made via Lovable will be committed automatically to this repo.
+3. Create a `.env` file in the server directory with the following content:
+```env
+PORT=3000
+DB_NAME=mindbloom
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_HOST=localhost
+JWT_SECRET=your-super-secret-key-change-this-in-production
+```
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+4. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## API Endpoints
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Authentication
+- `POST /auth/register` - Register a new user
+  - Body: `{ username, email, password }`
+- `POST /auth/login` - Login and get JWT token
+  - Body: `{ email, password }`
 
-**Use GitHub Codespaces**
+### Journal Entries
+- `GET /entries` - Get journal entries (with filtering and pagination)
+  - Query params: `mood`, `date`, `page`, `pageSize`
+- `POST /entries` - Create a new journal entry
+  - Body: `{ mood, note, trigger, entryDate }`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Recommendations
+- `GET /recommendations` - Get recommendations based on mood
+  - Query params: `mood`, `type`
 
-## What technologies are used for this project?
+## Frontend
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/60cadab0-1759-470a-a03a-beb8a6c8d59b) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+The frontend application will be developed using React and will be located in the `client` directory. 
